@@ -1,9 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :created_at
-
-  # Delegate the practical definition of `full_name` to 
-  # the User model, where it belongs, rather than 
-  # (re)defining it here.
+  attributes :id, :name, :email, :username, :password
   
   def full_name
     object.name 
